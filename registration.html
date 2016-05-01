@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>2016迎風舞建</title>
+  <!--css-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--script-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+  <!--icon-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav role="navigation" class="customnavcolor">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo">建楓暑訓</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/index">主頁</a></li>
+        <li><a href="/news">最新消息</a></li>
+        <li><a href="/course">課程</a></li>
+        <li><a href="/registration">報名辦法</a></li>
+        <li><a href="/pictures">歷屆照片</a></li>
+        <li><a href="/about">關於我們</a></li>
+        <li><a href="/comments">留言板</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/index">主頁</a></li>
+        <li><a href="/news">最新消息</a></li>
+        <li><a href="/course">課程</a></li>
+        <li><a href="/registration">報名辦法</a></li>
+        <li><a href="/pictures">歷屆照片</a></li>
+        <li><a href="/about">關於我們</a></li>
+        <li><a href="/comments">留言板</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+
+<h2 class="center customtextcolor">報名辦法</h5>
+
+<div class="container">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="name" type="text" class="validate">
+          <label for="name">姓名</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">person_pin</i>
+          <input id="birth" type="date" class="datepicker">
+          <label for="birth">生日</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">perm_identity</i>
+          <input id="ID" type="text" class="validate">
+          <label for="ID">身份證字號</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">phone</i>
+          <input id="telephone" type="tel" class="validate">
+          <label for="telephone">電話</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">email</i>
+          <input id="telephone" type="email" class="validate">
+          <label for="email">E-mail</label>
+        </div>
+        <div class="input-field col s12 m6">
+          <i class="material-icons prefix">school</i>
+          <input id="juniorschool" type="text" class="validate">
+          <label for="juniorschool">畢業國中</label>
+        </div>
+        <div class="col s12 center">
+          <button class="btn-large  waves-effect customnavcolor" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+        
+
+
+<footer class="page-footer" style="background-color: #112D4E">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="lime-text text-lighten-5">關於主辦</h5>
+          <p class="lime-text text-lighten-5">本活動是由"建國中學資訊社"與"中山女高資訊研究社"共同主辦。兩社多年來以推廣資訊為目標，一同籌辦多次大型活動，並富有舉辦活動的經驗。我們秉持著專業與熱誠，摯邀同學們參與活動。</p>
+
+
+        </div>
+        <div class="col l6 s12">
+          <h5 class="lime-text text-lighten-5">相關連結</h5>
+          <ul>
+            <li><a class="lime-text text-lighten-5" target="_blank" href="http://www.infor.org/">建國中學資訊社</a></li>
+            <li><a class="lime-text text-lighten-5" target="_blank" href="https://www.facebook.com/infor29th/">INFOR 29th</a></li>
+            <hr>
+            <li><a class="lime-text text-lighten-5" target="_blank" href="https://www.facebook.com/%E4%B8%AD%E5%B1%B1%E5%A5%B3%E9%AB%98%E8%B3%87%E8%A8%8A%E7%A0%94%E7%A9%B6%E7%A4%BE23rd-227240130967095/?fref=ts">中山女高資訊研究社23nd</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright" style="background-color: #2D4059" >
+      <div class="container white-text">
+        Last Update: 2016.5.13
+      </div>
+    </div>
+  </footer>
+
+<script type="text/javascript">
+    $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+</script>
+
+
+</body>
+</html>

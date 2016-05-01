@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title>2016迎風舞建</title>
+  <!--css-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link href="pictures.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <!--script-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/js/materialize.js"></script>
+    <script src="/js/init.js"></script>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav role="navigation" class="customnavcolor">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="index.html" class="brand-logo">建楓暑訓</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/index">主頁</a></li>
+        <li><a href="/news">最新消息</a></li>
+        <li><a href="/course">課程</a></li>
+        <li><a href="/registration">報名辦法</a></li>
+        <li><a href="/pictures">歷屆照片</a></li>
+        <li><a href="/about">關於我們</a></li>
+        <li><a href="/comments">留言板</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="/index">主頁</a></li>
+        <li><a href="/news">最新消息</a></li>
+        <li><a href="/course">課程</a></li>
+        <li><a href="/registration">報名辦法</a></li>
+        <li><a href="/pictures">歷屆照片</a></li>
+        <li><a href="/about">關於我們</a></li>
+        <li><a href="/comments">留言板</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+</div>
+
+<div class="tu">
+      <img class="pic1" src="/mm1.jpg" width="250px" height="400px">
+      <img class="pic2" src="/mm2.jpg" width="400px" height="250px">
+      <img class="pic3" src="/mm3.jpg" width="250px" height="400px">
+      <img class="pic4" src="/mm4.jpg" width="400px" height="250px">
+      <img class="pic5" src="/mm5.jpg" width="250px" height="400px">
+      <img class="pic6" src="/mm6.jpg" width="250px" height="250px">
+      <img class="pic7" src="/mm7.jpg" width="400px" height="400px">
+      <img class="pic8" src="/mm8.png" width="400px" height="250px">
+      <img class="pic9" src="/mm9.jpg" width="400px" height="250px">
+      <img class="pic10" src="/mm10.jpg" width="400px" height="250px">
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<style>
+      .tu{
+        width: 960px;
+        height: 450px;
+        margin: 60px auto;
+        position:relative;
+      }
+      img{
+        padding: 10px 10px 15px;
+        background: #fff;
+        border:1px solid #ddd;
+        position: absolute;
+        -webkit-transition:1s;
+        -moz-transition:1s;
+        transition:1s;
+        z-index:1;
+      }
+      img:hover{
+        -webkit-transform:rotate(0deg);
+        -moz-transform:rotate(0deg);
+        transform:rotate(0deg);
+        -webkit-transform:scale(1.5);
+        -moz-transform:scale(1.5);
+        transform:scale(1.5);
+        box-shadow:15px 15px 20px rgba(50, 50, 50, 0.4); 
+        z-index:2;
+      }
+      .pic1{
+        top: 30px;
+        left: 650px;
+        -webkit-transform:rotate(25deg);
+        -moz-transform:rotate(25deg);
+        transform:rotate(25deg);
+        width: 250px;
+        height: 400px;
+      }
+      .pic2{
+        top: 380px;
+        left: 680px;
+        -webkit-transform:rotate(20deg);
+        -moz-transform:rotate(20deg);
+        transform:rotate(20deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic3{
+        top: 420px;
+        left: 480px;
+        -webkit-transform:rotate(40deg);
+        -moz-transform:rotate(40deg);
+        transform:rotate(40deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic4{
+        top: 390px;
+        left: 260px;
+        -webkit-transform:rotate(-20deg);
+        -moz-transform:rotate(-20deg);
+        transform:rotate(-20deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic5{
+        top: 0px;
+        left: 30px;
+        -webkit-transform:rotate(-35deg);
+        -moz-transform:rotate(-35deg);
+        transform:rotate(-35deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic6{
+        top: 0px;
+        left: 430px;
+        -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        transform:rotate(-45deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic7{
+        top: 400px;
+        left: 90px;
+        -webkit-transform:rotate(15deg);
+        -moz-transform:rotate(15deg);
+        transform:rotate(15deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic8{
+        top: 100px;
+        left: -190px;
+        -webkit-transform:rotate(15deg);
+        -moz-transform:rotate(15deg);
+        transform:rotate(15deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic9{
+        top: 30px;
+        left: 240px;
+        -webkit-transform:rotate(20deg);
+        -moz-transform:rotate(20deg);
+        transform:rotate(20deg);
+        width: 400px;
+        height: 250px;
+      }
+      .pic10{
+        top: 340px;
+        left: -120px;
+        -webkit-transform:rotate(-15deg);
+        -moz-transform:rotate(-15deg);
+        transform:rotate(-15deg);
+        width: 400px;
+        height: 250px;
+      }
+</style>
+
+<footer class="page-footer" style="background-color: #112D4E">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="lime-text text-lighten-5">關於主辦</h5>
+          <p class="lime-text text-lighten-5">本活動是由"建國中學資訊社"與"中山女高資訊研究社"共同主辦。兩社多年來以推廣資訊為目標，一同籌辦多次大型活動，並富有舉辦活動的經驗。我們秉持著專業與熱誠，摯邀同學們參與活動。</p>
+
+
+        </div>
+        <div class="col l6 s12">
+          <h5 class="lime-text text-lighten-5">相關連結</h5>
+          <ul>
+            <li><a class="lime-text text-lighten-5" target="_blank" href="http://www.infor.org/">建國中學資訊社</a></li>
+            <li><a class="lime-text text-lighten-5" target="_blank" href="https://www.facebook.com/infor29th/">INFOR 29th</a></li>
+            <hr>
+            <li><a class="lime-text text-lighten-5" target="_blank" href="https://www.facebook.com/%E4%B8%AD%E5%B1%B1%E5%A5%B3%E9%AB%98%E8%B3%87%E8%A8%8A%E7%A0%94%E7%A9%B6%E7%A4%BE23rd-227240130967095/?fref=ts">中山女高資訊研究社23nd</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright" style="background-color: #2D4059" >
+      <div class="container white-text">
+        Last Update: 2016.5.13
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
