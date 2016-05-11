@@ -3,6 +3,9 @@ var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 
+var mongodb = require('mongodb');
+var mongo = mongodb.MongoClient;
+
 app.use(express.static('images'));
 app.use(express.static('materialize'));
 app.use('/dist',express.static(__dirname+'/dist'));
@@ -79,7 +82,15 @@ app.get('/sylecss', function(req, res) {
 });
 
 io.on("connection",function(socket){
-    //
+    socket.on("reg q",function(name,birth,id,phone,email,school){
+        mongo.connect('mongodb://210.71.78.200:27017/summer2016',function(err,db){
+            if(err){
+                throw err;
+            }
+            db.collection('reg').insert({name:name,birth:birth,id:id,phone:phone,email:email,school:school});
+            socket.emit('reg d');
+        })
+    })
 })
 
 
