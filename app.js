@@ -1,8 +1,17 @@
 var express = require('express');
-
 var app = express();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
 app.use(express.static('images'));
 app.use(express.static('materialize'));
+app.use('/dist',express.static(__dirname+'/dist'));
+
+app.get('/', function(req, res) {
+	res.sendFile(__dirname+'/index.html', function() {
+		res.end();
+	});
+});
 
 app.get('/index', function(req, res) {
 	res.sendFile(__dirname+'/index.html', function() {
@@ -49,6 +58,12 @@ app.get('/registration', function(req, res) {
 		res.end();
 	});
 });
+app.get('/registration2', function(req, res) {
+	res.sendFile(__dirname+'/registration2.html', function() {
+		res.end();
+	});
+});
+
 
 
 app.get('/maincss', function(req, res) {
@@ -63,4 +78,9 @@ app.get('/sylecss', function(req, res) {
 	});
 });
 
-app.listen(3000);
+io.on("connection",function(socket){
+    //
+})
+
+
+server.listen(5555);

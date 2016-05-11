@@ -9,11 +9,13 @@
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!--script-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
-    <script src="/js/init.js"></script>
   <!--icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--sweetalert-->
+    <script src="/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dist/sweetalert.css">
 </head>
 
 <body>
@@ -49,41 +51,41 @@
 <h2 class="center customtextcolor">報名辦法</h5>
 
 <div class="container">
-  <div class="row">
+  <div class="row">
     <form class="col s12">
       <div class="row">
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">account_circle</i>
           <input id="name" type="text" class="validate">
-          <label for="name">姓名</label>
+          <label for="name">姓名(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">person_pin</i>
           <input id="birth" type="date" class="datepicker">
-          <label for="birth">生日</label>
+          <label for="birth">生日(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">perm_identity</i>
           <input id="ID" type="text" class="validate">
-          <label for="ID">身份證字號</label>
+          <label for="ID">身份證字號(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">phone</i>
-          <input id="telephone" type="tel" class="validate">
-          <label for="telephone">電話</label>
+          <input id="phone" type="tel" class="validate">
+          <label for="phone">電話(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">email</i>
-          <input id="telephone" type="email" class="validate">
+          <input id="email" type="email" class="validate">
           <label for="email">E-mail</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">school</i>
-          <input id="juniorschool" type="text" class="validate">
-          <label for="juniorschool">畢業國中</label>
+          <input id="school" type="text" class="validate">
+          <label for="school">畢業國中(必填)</label>
         </div>
         <div class="col s12 center">
-          <button class="btn-large  waves-effect customnavcolor" type="submit" name="action">Submit<i class="material-icons right">send</i></button>
+          <button id="submit" class="btn-large waves-effect customnavcolor" type="button" name="actiona">Submit<i class="material-icons right">send</i></button>
         </div>
       </div>
     </form>
@@ -119,14 +121,52 @@
     </div>
   </footer>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
     $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
       $(".button-collapse").sideNav();
 </script>
-
+-->
 
 </body>
 </html>
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io("http://summer2016.infor.org");
+    
+    window.addEventListener('load',function(){
+        document.getElementById('submit').addEventListener('click',function(){
+            var name = document.getElementById('name').value;
+            var birth = document.getElementById('birth').value;
+            var id = document.getElementById('ID').value;
+            var phone = document.getElementById('phone').value;
+            var email = document.getElementById('email').value;
+            var school = document.getElementById('school').value;
+
+            var regerr = function(){
+                sweetAlert("Oops...", "Something went wrong!", "error");
+            }
+
+            if(!(name=="" || birth=="" || id=="" || phone=="" || email=="" || school=="")){
+                var idns = id.substring(1,id.length);
+                var idn = parseInt(idns);
+                var ida = id.substring(0,1);
+                var idan = parseInt(ida);
+                if(isNaN(idan) && idn>100000000 && idn<299999999){
+                    socket.emit("reg q",name,birth,id,phone,email,school);
+                }
+                else{
+                    regerr();
+                }
+            }
+            else{
+                regerr();
+            }
+        })
+    })
+
+
+</script>
