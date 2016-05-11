@@ -50,11 +50,6 @@ app.get('/comments', function(req, res) {
 	});
 });
 
-app.get('/picturecss', function(req, res) {
-	res.sendFile(__dirname+'/pictures.css', function() {
-		res.end();
-	});
-});
 
 app.get('/registration', function(req, res) {
 	res.sendFile(__dirname+'/registration.html', function() {
