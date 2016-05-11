@@ -81,14 +81,23 @@ app.get('/sylecss', function(req, res) {
 	});
 });
 
-io.on("connection",function(socket){
-    socket.on("reg q",function(name,birth,id,phone,email,school){
+io.on('connection',function(socket){
+    socket.on('reg q',function(name,birth,id,phone,email,school){
         mongo.connect('mongodb://210.71.78.200:27017/summer2016',function(err,db){
             if(err){
                 throw err;
             }
             db.collection('reg').insert({name:name,birth:birth,id:id,phone:phone,email:email,school:school});
             socket.emit('reg d');
+        })
+    })
+    socket.on('que q',function(name,email,detail){
+        mongo.connect('mongodb://210.71.78.200:27017/summer2016',function(err,db){
+            if(err){
+                throw err;
+            }
+            db.collection('que').insert({name:name,email:email,detail:detail});
+            socket.emit('que d');
         })
     })
 })

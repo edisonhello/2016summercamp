@@ -121,14 +121,14 @@
     </div>
   </footer>
 
-<!--<script type="text/javascript">
-    $('.datepicker').pickadate({
+<script type="text/javascript">
+/*    $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
-  });
+  });*/
       $(".button-collapse").sideNav();
 </script>
--->
+
 
 </body>
 </html>
@@ -148,7 +148,7 @@
                 confirmButtonText: "Yes, Submit!",
                 cancelButtonText: "No, I want to confirm.",
                 closeOnConfirm: false,
-                closeOnCancel: false
+                closeOnCancel: true
             }, function(isConfirm){
                 if(isConfirm){ 
                     //swal("Deleted!", "Your imaginary file has been deleted.", "success");
