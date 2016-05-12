@@ -57,32 +57,32 @@
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">account_circle</i>
           <input id="name" type="text" class="validate">
-          <label for="name">姓名(必填)</label>
+          <label for="name">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 姓名(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">person_pin</i>
           <input id="birth" type="date" class="datepicker">
-          <label for="birth">生日(必填)</label>
+          <label for="birth">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 生日(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">perm_identity</i>
           <input id="ID" type="text" class="validate">
-          <label for="ID">身份證字號(必填)</label>
+          <label for="ID">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 身份證字號(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">phone</i>
           <input id="phone" type="tel" class="validate">
-          <label for="phone">電話(必填)</label>
+          <label for="phone">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 電話(必填)</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">email</i>
           <input id="email" type="email" class="validate">
-          <label for="email">E-mail</label>
+          <label for="email">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; E-mail</label>
         </div>
         <div class="input-field col s12 m6">
           <i class="material-icons prefix">school</i>
           <input id="school" type="text" class="validate">
-          <label for="school">畢業國中(必填)</label>
+          <label for="school">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 畢業國中(必填)</label>
         </div>
         <div class="col s12 center">
           <button id="submit" class="btn-large waves-effect customnavcolor" type="button" name="actiona">Submit<i class="material-icons right">send</i></button>
@@ -94,7 +94,7 @@
         
 
 
-<footer class="page-footer" style="background-color: #112D4E">
+<footer class="page-footer margin:0px" style="background-color: #112D4E">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -122,16 +122,23 @@
   </footer>
 
 <script type="text/javascript">
-/*    $('.datepicker').pickadate({
+    $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
-    selectYears: 15 // Creates a dropdown of 15 years to control year
-  });*/
+    selectYears: 50 // Creates a dropdown of 15 years to control year
+  });
       $(".button-collapse").sideNav();
 </script>
 
 
 </body>
 </html>
+
+<style>
+.input-field .prefix ~ label {
+  margin-left: 0rem;
+}
+
+</style>
 
 <script src="/socket.io/socket.io.js"></script>
 <script>
