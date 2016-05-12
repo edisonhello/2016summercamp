@@ -2973,7 +2973,6 @@ ul.staggered-list li {
 }
 
 footer.page-footer {
-  margin-top: 20px;
   padding-top: 20px;
   background-color: #ee6e73;
 }
@@ -5791,19 +5790,30 @@ textarea.materialize-textarea + label:after {
   left: 0.75rem;
   font-size: 1rem;
   cursor: text;
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  -ms-transition: .2s ease-out;
   transition: .2s ease-out;
 }
 
 .input-field label.active {
   font-size: 0.8rem;
   -webkit-transform: translateY(-140%);
-          transform: translateY(-140%);
+  -moz-transform: translateY(-140%);
+  -ms-transform: translateY(-140%);
+  -o-transform: translateY(-140%);
+  transform: translateY(-140%);
 }
 
 .input-field .prefix {
   position: absolute;
   width: 3rem;
   font-size: 2rem;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -o-transition: color .2s;
+  -ms-transition: color .2s;
   transition: color .2s;
 }
 
@@ -5823,7 +5833,7 @@ textarea.materialize-textarea + label:after {
 }
 
 .input-field .prefix ~ label {
-  margin-left: 3rem;
+  margin-left: 0rem;
 }
 
 @media only screen and (max-width: 992px) {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-tw">
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
@@ -9,11 +9,13 @@
     <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
     <link href="/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
   <!--script-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="/js/materialize.js"></script>
-    <script src="/js/init.js"></script>
   <!--icon-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--sweetalert-->
+    <script src="/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/dist/sweetalert.css">
 </head>
 
 <body>
@@ -45,67 +47,61 @@
   </nav>
 </div>
 
-<h2 class="center customtextcolor">活動內容</h5>
-<div class="container customtextcolor">
-  <h4>活動流程</h4>
-  <table class="striped responsive-table centered">
-        <thead>
-          <tr>
-              <th>時間</th>
-              <th>7/18(一)</th>
-              <th>7/19(二)</th>
-              <th>7/20(三)</th>
-              <th>7/21(四)</th>
-              <th>7/22(五)</th>
-              <th>7/23(六)</th>
-              <th>7/24(日)</th>
-          </tr>
-        </thead>
 
-        <tbody>
-          <tr>
-            <td>08:00~09:00</td>
-            <td>破冰時間</td>
-            <td>晨間早操</td>
-            <td>晨間早操</td>
-            <td>晨間早操</td>
-            <td>晨間早操</td>
-            <td>晨間早操</td>
-            <td>晨間早操</td>
-          </tr>
-          <tr>
-            <td>09:00~12:00</td>
-            <td>大地遊戲</td>
-            <td>WEB</td>
-            <td>JAVA程式語言</td>
-            <td>Python程式語言</td>
-            <td>神秘活動</td>
-            <td>C++程式語言</td>
-            <td>成果發表</td>
-          </tr>
-          <tr>
-            <td>12:00~14:00</td>
-            <td>午餐時間</td>
-            <td>午餐時間</td>
-            <td>午餐時間</td>
-            <td>午餐時間</td>
-            <td>午餐時間</td>
-            <td>午餐時間</td>
-            <td>午餐時間</td>
-          </tr>
-          <tr>
-            <td>14:00~17:00</td>
-            <td>遊戲設計Unity3D</td>
-            <td>美宣程式AI</td>
-            <td>真人RPG</td>
-            <td>Pygame</td>
-            <td>美宣程式AE SAI</td>
-            <td>RPG&nbsp;Maker</td>
-            <td>超神秘活動<b>(至晚上9點)</b></td>
-          </tr>
-        </tbody>
-  </table>
+
+
+<div class="container">
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="col s12 m6">
+          <h2 class="customtextcolor">報名辦法</h2>
+          <h5><b>1.時程：</b></h5>
+          <li><p style="font-size: 125%">第一階段報名時間：5/15~6/10</p></li>
+          <li><p style="font-size: 125%">第一階段錄取與備取名單：6/11</p></li>
+          <li><p style="font-size: 125%">第一階段繳費時間：6/11~6/18</p></li>
+          <li><p style="font-size: 125%">第一階段正取名單：6/21</p></li>
+          <hr>
+          <li><p style="font-size: 125%">第二階段報名時間：6/21~7/4</p></li>
+          <li><p style="font-size: 125%">第二階段錄取與備取名單：7/5</p></li>
+          <li><p style="font-size: 125%">第二階段繳費時間：7/5~7/11</p></li>
+          <li><p style="font-size: 125%">第二階段正取名單：7/14</p></li>
+          <h5><b>2.報名方式：</b></h5><p style="font-size: 125%">本活動一律採取網路報名</p>
+        </div>
+      <div class="col s12 m6">
+        <br>
+        <h5><b>3.報名程序：</b></h5>
+        <p style="font-size: 125%">==>進入報名頁面填寫資料</p>
+        <p style="font-size: 125%">==>若報名結果為錄取</p>
+        <p style="font-size: 125%">==>進行繳交報名費用</p>
+        <p style="font-size: 125%">==>接受繳費成功通知</p>
+        <p>※若為備取，繳款時間結束後有人尚未繳款，將以臉書通知</p>
+        <h5><b>4.報名費用：</b>新臺幣1800元整</h5><br>
+        <h5><b>5.繳費方式：</b></h5>
+        <p style="font-size: 125%">以「郵局匯款」方式</p>
+        <li style="font-size: 115%">郵局代號：700</li>
+        <li style="font-size: 115%">匯款局號：0001911</li>
+        <li style="font-size: 115%">匯款帳號：0414988</li>
+        <p>(勿使用無摺匯款以利確認資料及退款)</p>
+        <p>(匯款手續費請自行負擔)</p>
+      </div>
+      <div class="col s12">
+        <p>※當第一階段或第二階段公布錄取名單時（尚未正取），粉專將會私訊錄取的同學提醒繳款期限，最後將於6/21以及7/14公布最後正取的名單</p>
+
+        <p>※歡迎第一階段未錄取的同學把握機會報名第二階段喔:)</p>
+
+        <p>※請隨時關注網站與粉專的最新消息，有任何異動將第一時間公布於此</p><br>
+
+      </div>
+
+        <div class="col s12 center">
+          <a href="/registration"><button id="submit" class="btn-large waves-effect customnavcolor" type="button" name="actiona"><h5>點我去報名</h5></button></a>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
+        
 
 
 <footer class="page-footer" style="background-color: #112D4E">
@@ -134,8 +130,11 @@
       </div>
     </div>
   </footer>
-  <script type="text/javascript">
+
+
+<script type="text/javascript">
       $(".button-collapse").sideNav();
 </script>
 </body>
 </html>
+
