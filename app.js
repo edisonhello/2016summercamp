@@ -50,17 +50,19 @@ app.get('/comments', function(req, res) {
 	});
 });
 
-app.get('/picturecss', function(req, res) {
-	res.sendFile(__dirname+'/pictures.css', function() {
-		res.end();
-	});
-});
 
 app.get('/registration', function(req, res) {
 	res.sendFile(__dirname+'/registration.html', function() {
 		res.end();
 	});
 });
+
+app.get('/regist_detail', function(req, res) {
+	res.sendFile(__dirname+'/regist_detail.html', function() {
+		res.end();
+	});
+});
+
 app.get('/registration2', function(req, res) {
 	res.sendFile(__dirname+'/registration2.html', function() {
 		res.end();
