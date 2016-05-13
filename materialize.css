@@ -2973,7 +2973,6 @@ ul.staggered-list li {
 }
 
 footer.page-footer {
-  margin-top: 20px;
   padding-top: 20px;
   background-color: #ee6e73;
 }
@@ -4343,7 +4342,7 @@ h1 {
 h2 {
   font-size: 3.56rem;
   line-height: 110%;
-  /*margin: 1.78rem 0 1.424rem 0;*/
+  margin: 1.78rem 0 1.424rem 0;
 }
 
 h3 {
@@ -5618,7 +5617,7 @@ input[type=tel]:focus:not([readonly]) + label,
 input[type=number]:focus:not([readonly]) + label,
 input[type=search]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
-  color: #555555;
+  color: #26a69a;
 }
 
 input:not([type]).valid, input:not([type]):focus.valid,
@@ -5791,19 +5790,30 @@ textarea.materialize-textarea + label:after {
   left: 0.75rem;
   font-size: 1rem;
   cursor: text;
+  -webkit-transition: .2s ease-out;
+  -moz-transition: .2s ease-out;
+  -o-transition: .2s ease-out;
+  -ms-transition: .2s ease-out;
   transition: .2s ease-out;
 }
 
 .input-field label.active {
   font-size: 0.8rem;
   -webkit-transform: translateY(-140%);
-          transform: translateY(-140%);
+  -moz-transform: translateY(-140%);
+  -ms-transform: translateY(-140%);
+  -o-transform: translateY(-140%);
+  transform: translateY(-140%);
 }
 
 .input-field .prefix {
   position: absolute;
   width: 3rem;
   font-size: 2rem;
+  -webkit-transition: color .2s;
+  -moz-transition: color .2s;
+  -o-transition: color .2s;
+  -ms-transition: color .2s;
   transition: color .2s;
 }
 
@@ -7608,8 +7618,7 @@ input[type=range]:focus::-ms-fill-upper {
    CUSTOM MATERIALIZE STYLES
    ========================================================================== */
 .picker__input.picker__input--active {
-  /*border-color: #E3F2FD;*/
-  border-color: #FF1111;
+  border-color: #E3F2FD;
 }
 
 .picker__frame {
@@ -7620,7 +7629,7 @@ input[type=range]:focus::-ms-fill-upper {
 @media (min-height: 38.875em) {
   .picker--opened .picker__frame {
     top: 10%;
-    /*bottom: auto;*/
+    bottom: auto;
   }
 }
 
@@ -7979,7 +7988,7 @@ input[type=range]:focus::-ms-fill-upper {
 .picker__day--infocus {
   color: #595959;
   letter-spacing: -.3;
- FFadding: .75rem 0;
+  padding: .75rem 0;
   font-weight: 400;
   border: 1px solid transparent;
 }

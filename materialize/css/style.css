@@ -16,7 +16,7 @@ body {
   font-family: Microsoft JhengHei;
 }
 footer.page-footer {
-  margin: 0px;
+  margin: 0;
 }
 nav ul a,
 nav .brand-logo {
@@ -32,6 +32,12 @@ p {
   color: #ffffff;
 }
 
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
 
 #photo-wall{ 
     max-width: 1000px; 
